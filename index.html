@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRITECH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+  <header class="hero-header">
+    <!-- <div class="hero-content">
+
+    <h1>AgriTech</h1>
+    <p>Sowing Innovation, Reaping Sustainability</p>
+    </div> -->
+
+
+    <div class="header-container">
+        <div class="logo1">
+            <h1>AgriTech</h1>
+            <p>Sowing Innovation, Reaping Sustainability</p>
+        </div>
+    </div>
+        <div class="logo">
+          <img src="https://i.ibb.co/3skBVyx/logoooooo.jpg" alt="AgriTech Logo">
+      </div>
+    </header>
+
+
+
+
+    <div class="container py-5">
+      <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <img src="https://i.ibb.co/cCWXKcj/p1.jpg" alt="Front Image 1" class="img-fluid">
+                      </div>
+                      <div class="flip-card-back">
+                          <h3 style="color: black;">Titan Arum </h3>
+                          <p>
+                            Known as the "Corpse Flower" due to its strong odor resembling rotting flesh.
+                            Native to the rainforests of Sumatra, Indonesia.
+                           
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-4">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <img src="https://i.ibb.co/1Rwz0nd/p2.jpg" alt="Front Image 2" class="img-fluid">
+                      </div>
+                      <div class="flip-card-back">
+                          <h3 style="color: black;">Ghost Orchid</h3>
+                          <p>A rare, leafless orchid known for its ethereal white flowers that appear to "float" in the air.
+                            Found in the swamps of Florida, Cuba, and the Bahamas.
+                        </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-4">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <img src="https://i.ibb.co/YyxT5HX/p3.jpg" alt="Front Image 3" class="img-fluid">
+                      </div>
+                      <div class="flip-card-back">
+                          <h3 style="color: black;">Fuchsia Flower</h3>
+                          <p>Distinctive Blooms , known for their vibrant, hanging flowers in pink, purple, red, and white shades.
+                            Pollinator-Friendly ,attracts hummingbirds, bees, and butterflies with its nectar-rich blooms.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <main>
+        <p>This is the main content of the website. Scroll to see the floating navigation icon in action.</p>
+    </main>  -->
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+      <section class="input-section">
+          <h2>Find the Best Crop for Your Region</h2>
+          <form id="crop-form">
+              <div class="form-group">
+                  <label for="region">Region:</label>
+                  <input type="text" id="region" placeholder="Enter your region" required>
+              </div>
+              <div class="form-group">
+                  <label for="rainfall">Rainfall (mm):</label>
+                  <input type="number" id="rainfall" placeholder="Enter rainfall in mm" required>
+              </div>
+              <div class="form-group">
+                  <label for="temperature">Temperature (°C):</label>
+                  <input type="number" id="temperature" placeholder="Enter temperature in °C" required>
+              </div>
+              <button type="button" class="btn" onclick="getCropDetails()">Submit</button>
+          </form>
+      </section>
+
+      <section class="output-section" id="output-section">
+          <h2>Recommended Crop</h2>
+          <div id="crop-output"></div>
+      </section>
+  </main>
+
+
+
+
+
+
+
+<div id="calculator">
+  <div class="calculator-container shadow-effect p-4">
+    <h1>Sustainability Score Calculator</h1>
+    <form id="sustainability-form">
+      <div class="mb-3">
+        <label for="waterUsage" class="form-label">Water Usage (liters/kg yield):</label>
+        <input type="number" id="waterUsage" class="form-control" placeholder="Enter water usage per unit yield" required>
+      </div>
+      <div class="mb-3">
+        <label for="soilHealth" class="form-label">Soil Health (scale 1-10):</label>
+        <input type="number" id="soilHealth" class="form-control" placeholder="Rate soil health" min="1" max="10" required>
+      </div>
+      <div class="mb-3">
+        <label for="carbonFootprint" class="form-label">Carbon Footprint (kg CO2e/ha):</label>
+        <input type="number" id="carbonFootprint" class="form-control" placeholder="Enter carbon footprint" required>
+      </div>
+      <div class="mb-3 position-relative">
+        <label for="fertilizer" class="form-label">Fertilizer Used:</label>
+        <input type="text" id="fertilizer" class="form-control" placeholder="Start typing for suggestions...">
+        <div id="suggestions" class="suggestion"></div>
+      </div>
+      <button type="button" class="btn btn-success w-100" onclick="calculateScore()">Calculate</button>
+    </form>
+    <div id="results" class="mt-4"></div>
+  </div>
+</div>
+
+
+  <footer>
+      <p>&copy; 2024 AgriTech. Driving Sustainable Farming.</p>
+  </footer>
+
+
+
+
+
+    
+
+    <div id="floating-nav">
+        <div id="nav-icon" onclick="toggleNav()">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+          <button id="close-nav" onclick="closeNav()">X</button>
+          <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about" onclick="openAboutModal()">About Us</a></li>
+             
+<li class="dropdown">
+  <a href="#" class="dropbtn">Services</a>
+  <div class="dropdown-content">
+      <a href="#">Precision Farming Solutions</a>
+      <a href="#">Predictive Analytics & Forecasting</a>
+      <a href="#">Automated Farm Management Systems</a>
+      <a href="#">Data Analytics & Farm Optimization</a>
+  </div>
+</li>
+
+<li class="dropdown">
+              <a href="#" class="dropbtn">Contact</a>
+              <div class="dropdown-content">
+                <a href="#">Phone No:1234567890</a>
+                <a href="#">Email:agritech@gmail.com</a>
+                </div>
+                </li>
+          </ul>
+      </nav>
+      
+      
+      
+      <div id="about-us-modal" class="modal">
+          <div class="modal-content">
+              <span class="close-btn" onclick="closeAboutModal()">&times;</span>
+              <h2>About Us</h2>
+              <p>Welcome to <b>AgriTech</b>, where cutting-edge <em>Artificial Intelligence meets agriculture</em> to create a more efficient, sustainable, and prosperous future for farmers and the planet.</p>
+              <h3>Our Mission</h3>
+              <p>We are committed to <em>empowering farmers</em> with intelligent tools that enhance productivity, improve decision-making, and promote sustainability. By harnessing the power of AI, we aim to make agriculture more resilient, efficient, and profitable for farmers everywhere.</p>
+              <h3>Our Vision</h3>
+              <p>We envision a world where <em>technology and nature work in harmony</em>, creating a sustainable agricultural ecosystem capable of feeding future generations.</p>
+              <h3>Our Core Values</h3>
+              <ul>
+                  <li><strong>Innovation:</strong> Constantly pushing the boundaries of technology to deliver smarter solutions.</li>
+                  <li><strong>Sustainability:</strong> Prioritizing eco-friendly practices that protect natural resources.</li>
+                  <li><strong>Collaboration:</strong> Building strong partnerships with farmers, researchers, and industry leaders.</li>
+                  <li><strong>Integrity:</strong> Ensuring transparency and ethical practices in everything we do.</li>
+              </ul>
+              <h3>Meet Our Team</h3>
+              <p>Our team consists of <em>AI experts, agricultural scientists, and data analysts</em> dedicated to transforming the agricultural landscape.</p>
+              <h3>What We Offer</h3>
+              <ul>
+                  <li><strong>Precision Farming Tools:</strong> Real-time data insights on soil, crop health, and irrigation.</li>
+                  <li><strong>Predictive Analytics:</strong> Weather forecasting, pest detection, and yield prediction.</li>
+              </ul>
+              <h3>Our Impact</h3>
+              <p>Our solutions have already helped farmers <em>increase crop yields by up to 30%</em>, reduce water usage by 20%, and cut down operational costs significantly.</p>
+              <p><strong>Let’s grow smarter, together.</strong></p>
+          </div>
+      </div>
+      
+      
+      
+    </div>
+  
+</nav>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
